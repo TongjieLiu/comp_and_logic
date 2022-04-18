@@ -1,0 +1,79 @@
+% A problem solution for Computability and Logic, 5th edition
+%
+% Copyright (C) 2022 Tongjie Liu <tongjieandliu@gmail.com>.
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\title{Problem 1.2}
+\author{Tongjie Liu}
+
+
+\begin{document}
+\maketitle
+
+
+\section{Part A}
+\begin{proof}
+	The fact that $f$ and $g$ are both total could be written as:
+	\begin{align*}
+		\forall a \in \mathbf{A}, \exists f(a) \\
+		\forall b \in \mathbf{B}, \exists g(b)
+	\end{align*}
+	Since $f(a) \in \mathbf{B}, \forall a \in \mathbf{A}$, we now have:
+	\begin{equation*}
+		\forall a \in \mathbf{A}, \exists g(f(a)) \qedhere
+	\end{equation*}
+\end{proof}
+
+
+\section{Part B}
+\begin{proof}
+	The fact that $f$ and $g$ are both onto could be written as:
+	\begin{align*}
+		\forall b \in \mathbf{B}, \exists a \  
+			such \  that \  f(a) = b \\
+		\forall c \in \mathbf{C}, \exists b \ 
+			such \  that \  g(b) = c
+	\end{align*}
+	This means that we now have:
+	\begin{equation*}
+		\forall c \in \mathbf{C}, \exists a \ 
+			such \  that \  g(f(a)) = c \qedhere
+	\end{equation*}
+\end{proof}
+
+
+\section{Part C}
+\begin{proof}
+	The fact that $f$ and $g$ are both one-to-one could be written as:
+	\begin{align*}
+		\forall b \in \mathbf{B}, a \  is \  unique \ 
+			if \  \exists a \in \mathbf{A} \ 
+			such \  that \  f(a) = b \\
+		\forall c \in \mathbf{C}, b \  is \  unique \ 
+			if \  \exists b \in \mathbf{B} \ 
+			such \  that \  g(b) = c
+	\end{align*}
+	This means that we now have:
+	\begin{equation*}
+		\forall c \in \mathbf{C}, a \  is \  unique \ 
+			if \  \exists a \in \mathbf{A} \ 
+			such \  that \  g(f(a)) = c \qedhere
+	\end{equation*}
+\end{proof}
+\end{document}
