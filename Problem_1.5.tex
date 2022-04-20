@@ -1,0 +1,51 @@
+% A problem solution for Computability and Logic, 5th edition
+%
+% Copyright (C) 2022 Tongjie Liu <tongjieandliu@gmail.com>.
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\title{Problem 1.5}
+\author{Tongjie Liu}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{proof}
+	According to Section 1.2 \textit{Enumerable Sets} of the book,
+the set of rational numbers is an enumerable set. Since set (a) is a
+subset of the set of rational numbers, it's an enumerable set itself.
+
+	According to the same section, the set of finite sets of positive
+integers is also an enumerable set. For this reason, there must be a
+function $f$ that could enumerate this set. From the definition of cofinite,
+we know that there is a finite set of positive integers for each cofinite
+set of positive integers. If we substitue each finite set of positive integers
+with its counterpart cofinite set of positive integers, then we'll have a
+function $f'$ that could enumerate the set of cofinite sets of positive
+integers. In other words, the set of cofinite sets of positive integers
+is an enumerable set. Set (b) is an enumerable too, since it is the union
+of two enumerable sets, namely the set of finite sets of positive integers
+and the set of cofinite sets of positive integers.
+
+	Sets (a) and (b) are enumerable and not finite, hence they are both
+equinumerous with the set of all positive integers. According to Problem 1.3,
+they are equinumerous. \qedhere
+\end{proof}
+\end{document}
