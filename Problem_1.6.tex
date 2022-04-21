@@ -1,0 +1,41 @@
+% A problem solution for Computability and Logic, 5th edition
+%
+% Copyright (C) 2022 Tongjie Liu <tongjieandliu@gmail.com>.
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\title{Problem 1.6}
+\author{Tongjie Liu}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{proof}
+	According to Section 1.2 \textit{Enumerable Sets} of the book,
+the set of finite sets of positive integers is an enumerable set, and
+could be enumerated by a function $f$.
+
+	Since a set $\mathbf{A}$ is an enumerable set, there must be a
+function $g$ that could enumerate it. We could substitute each positive
+integer $n$ in the range of function $f$ with a member $g(n)$ of set
+$\mathbf{A}$. Then the new function $f'$ enumerates the set of all finite
+subsets of the enumerable set $\mathbf{A}$.
+\end{proof}
+\end{document}
