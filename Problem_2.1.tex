@@ -1,0 +1,55 @@
+% A problem solution for Computability and Logic, 5th edition
+%
+% Copyright (C) 2022 Tongjie Liu <tongjieandliu@gmail.com>.
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\title{Problem 2.1}
+\author{Tongjie Liu}
+
+
+\theoremstyle{definition} \newtheorem*{def-delta-l}{$\mathbf{\Delta(L)}$}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{proof}
+	If set $\mathbf{A}$ is an infinite enumerable set, then there is
+a function $f$ to enumerate it.
+
+	Let's suppose there is an enumeration $L$ of the set of all subsets
+of set $\mathbf{A}$, then we could always define a speical set named
+$\mathbf{\Delta(L)}$ as follows:
+	\begin{def-delta-l}
+		For each positive integer $n$, $f(n)$ is in set $\mathbf{
+	\Delta(L)}$ if and only if $f(n)$ is not in set $\mathbf{S_n}$ which
+	is the $n$th entry of enumeration $L$.
+	\end{def-delta-l}
+
+	Since the set of all subsets of set $\mathbf{A}$ is enumerable, then
+set $\mathbf{\Delta(L)} \subseteq \mathbf{A}$ is in enumeration $L$. In other
+words, for some positive integer $m$, $\mathbf{\Delta(L)} = \mathbf{S_m}$,
+which is the $m$th entry of enumeration $L$.
+
+	But according to the definition of set $\mathbf{\Delta(L)}$, $f(m) \in
+\mathbf{S_m}$ is not in it. In other words, we've found a self-contradiction
+which is $f(m) \in \mathbf{\Delta(L)}$ and $f(m) \notin \mathbf{\Delta(L)}$.
+\end{proof}
+\end{document}
