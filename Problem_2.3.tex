@@ -1,0 +1,55 @@
+% A problem solution for Computability and Logic, 5th edition
+%
+% Copyright (C) 2022 Tongjie Liu <tongjieandliu@gmail.com>.
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{IEEEtrantools}
+
+\title{Problem 2.3}
+\author{Tongjie Liu}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{proof}
+	Our goal is to find a correspondence between the set of points on the
+semicircle and the set of real numbers.
+
+	If $\xi$ is a real number and $\xi \in (-1, 1)$, then $\xi$ has a
+decimal expansion $\pm 0 . \xi_1 \xi_2 \xi_3 \ldots$ where each $\xi_i$ is one
+of the cyphers 0-9. Some numbers have two decimal expansions, choose the one
+with the 0s rather the one with the 9s. We define a function $g$ of $\xi$ by
+assosiate each $\xi$ with an integer $\pm \xi_n \xi_{n - 1} \ldots \xi_2
+\xi_1$, where $\xi_n$ is the least significant digit of $\xi$.
+
+	Each point $(x, y)$ with $x \in (0, 1)$ and $y \in (0, 0.5)$ on the
+semicircle could be associated to a pair $(a, b)$ with $a \in \mathbb{Z}$
+and $b \in \mathbb{N}$ by a function $f$ defined by the following rules:
+	\begin{IEEEeqnarray}{l}
+		a = g(2(x - 0.5)), \nonumber \\
+		b = g(2y). \nonumber
+	\end{IEEEeqnarray}
+
+	The correspondence we need is a function which associate each point
+$(x, y)$ on the semicircle with a real number represented in decimal notation
+as ``$a.b$'', where $a$ and $b$ are determined by pair $(a, b) = f(x, y)$.
+\end{proof}
+\end{document}
