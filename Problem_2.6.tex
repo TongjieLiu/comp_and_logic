@@ -1,0 +1,64 @@
+% A problem solution for Computability and Logic, 5th edition
+%
+% Copyright (C) 2022 Tongjie Liu <tongjieandliu@gmail.com>.
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\title{Problem 2.6}
+\author{Tongjie Liu}
+
+
+\begin{document}
+\maketitle
+
+
+\section{Part A}
+\begin{proof}
+	It's possible to define a function $f$ that associate each finite
+sequence of rational numbers $n, c_d, c_{d - 1}, \ldots, c_1, c_0$ to
+an algebraic number $x$, where $n$ is the rank of $x$ in all solutions of
+equation $c_d x^d + c_{d - 1} x^{d - 1} + \ldots + c_1 x + c_0 = 0$
+arranged in ascending order.
+
+	When writing as fractions, a finite sequence of rational numbers
+is described by a finite string of symbol ``0'', ``1'', ``2'', ``3'',
+``4'', ``5'', ``6'', ``7'', ``8'', ``9'', `` '', ``/'', and ``,''.
+\end{proof}
+
+
+\section{Part B}
+\begin{proof}
+	According to Section 1.2 \textit{Enumerable Sets} of the book,
+the set of rational numbers is enumerable. Since it is also infinite,
+it is equinumerous with the set of positive integers. Furthermore, the
+set of finite sequences of rational numbers is equinumerous with the
+set of finite sequences of positive integers, which is enumerable according
+to the same section of the book. Therefore, the set of finite sequences
+of rational number is enumerable.
+
+	Let us suppose that there is no transcendental number exist. In
+other words, all real numbers are algebraic. As a consequence, the range
+of function $f$ is the set of real numbers.
+
+	According to the definition of algebraic number, $f$ is both onto
+and total. For this reason, an enumeration of the set of finite sequences
+of rational number could generates through function $f$ an enumeration of
+the set of real numbers. But the set of real numbers is not enumerable,
+which is Corollary 2.2.
+\end{proof}
+\end{document}
