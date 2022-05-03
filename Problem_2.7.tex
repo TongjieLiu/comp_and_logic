@@ -1,0 +1,96 @@
+% A problem solution for Computability and Logic, 5th edition
+%
+% Copyright (C) 2022 Tongjie Liu <tongjieandliu@gmail.com>.
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{IEEEtrantools}
+
+\title{Problem 2.7}
+\author{Tongjie Liu}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{proof}
+	Let us call the set of real numbers $\xi$ with $0 < \xi < 1$ and
+$\xi$ is a rational number with denominator of a power of 2 set $\mathbf{A}$,
+and the set of those sets of positive integers that are either finite or
+cofinite set $\mathbf{B}$. Furthermore, let us also call the absolute
+complement of set $\mathbf{A}$ with respect to interval $(0, 1)$ set
+$\mathbf{A}'$, and the absolute complement of set $\mathbf{B}$ with respect
+to the set of all sets of positive integers set $\mathbf{B}'$. To discover
+the relationship between set $\mathbf{A}'$ and $\mathbf{B}'$, we have to
+first understand the relationship between set $\mathbf{A}$ and $\mathbf{B}$.
+
+	Since all integers can be represented in binary, each real number
+$\xi$ with $\xi = \frac{N}{2^m} \in A$ where $N \in \{ N \in \mathbb{N}^+
+| 1 \leq N < 2^m \} $ and $m \in \mathbb{N}^+$, can be expanded as follows:
+	\begin{IEEEeqnarray}{rCl}
+		\xi & = & \frac{N}{2^m} \nonumber \\
+		& = & \frac{x_1 \cdot 2^{m - 1} + x_2 \cdot 2^{m - 2} +
+	\ldots + x_{m - 1} \cdot 2 + x_m}{2^m} \nonumber \\
+		& = & \frac{x_1 \cdot 2^{m - 1}}{2^m} + \frac{x_2 \cdot
+	2^{m - 2}}{2^m} + \ldots + \frac{x_{m - 1} \cdot 2}{2^m} +
+	\frac{x_m}{2^m} \nonumber \\
+		& = & \frac{x_1}{2} + \frac{x_2}{2^2} + \ldots +
+	\frac{x_{m - 1}}{2^{m - 1}} + \frac{x_m}{2^m} \nonumber \\
+		& = & x_1 \cdot 2^{-1} + x_2 \cdot 2^{-2} + \ldots +
+	x_{m - 1} \cdot 2^{- (m - 1)} + x_m \cdot 2^{-m} \nonumber \\
+		& = & 0 . x_1 x_2 \ldots x_{m - 1} x_m \text{, where
+	$x_i \in \{ 0, 1 \}$.} \nonumber
+	\end{IEEEeqnarray}
+
+	Obviouly, each real number $\xi \in \mathbf{A}$ is \emph{finite}
+in the sense that there are only at most $m$ 1s in its binary expansion.
+
+	If we define a function $f$ by associating each real number $\xi$
+with its binary expansion $0 . x_1 x_2 x_3 \ldots$ and choose the one
+ending with 0s rather than 1s when there is a choice, each real number
+$\xi \in \mathbf{A}$ is associated with a \emph{finite} set $f(\xi)$.
+
+	According to the definition of cofinite, each finite set corresponds
+to a cofinite set. In our case, each finite set $f(\xi)$ determined by a
+real number $\xi \in A$ corresponds to a cofinite set $f(\xi')$ determined
+by a real number
+	\begin{IEEEeqnarray}{rCl}
+		\xi' & = & 0 . y_1 y_2 \ldots y_{m - 1} y_m 1 1 \ldots
+	\nonumber \\
+		& = & 0 . y_1 y_2 \ldots y_{m - 1} y_m + 2^{-m} \nonumber \\
+		& = & \frac{N'}{2^m} + 2^{-m} \nonumber \\
+		& = & \frac{N'}{2^m} + \frac{1}{2^m} \nonumber \\
+		& = & \frac{N' + 1}{2^m} \text{, where } N' \in \mathbb{N}^+,
+	y_i \in \{ 0, 1 \}. \nonumber
+	\end{IEEEeqnarray}
+
+	Each $y_i$ in the binary expansion of $\xi'$ is 1 when $x_i$ in the
+binary expansion of $\xi$ is 0, and \textit{vice versa}. Since positive
+integer $N$ has at least a single 1 in $x_i$, it's not possible that all
+$y_i$ equals 1. Thus, we are confident with the fact $\xi' = \frac{N' + 1}
+{2^m} \in \mathbf{A}$.
+
+	Now, we could understand the relationship between set $\mathbf{A}$
+and $\mathbf{B}$. Clearly, they are equinumerous with each other.
+
+	It's not difficult for us to see that set $\mathbf{A}'$ and
+$\mathbf{B}'$ are equinumerous with each other too, and the correspndence
+between them is simply function $f$.
+\end{proof}
+\end{document}
