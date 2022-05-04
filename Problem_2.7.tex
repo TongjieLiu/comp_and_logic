@@ -61,10 +61,15 @@ $\xi$ with $\xi = \frac{N}{2^m} \in A$ where $N \in \{ N \in \mathbb{N}^+
 	Obviouly, each real number $\xi \in \mathbf{A}$ is \emph{finite}
 in the sense that there are only at most $m$ 1s in its binary expansion.
 
-	If we define a function $f$ by associating each real number $\xi$
-with its binary expansion $0 . x_1 x_2 x_3 \ldots$ and choose the one
-ending with 0s rather than 1s when there is a choice, each real number
-$\xi \in \mathbf{A}$ is associated with a \emph{finite} set $f(\xi)$.
+	For each real number $x \in (0, 1)$, there is a unique binary
+expansion for $x$ if we choose the expansion with 0s on the right rather
+than the expansion with 1s on the right when there is a choice between two
+candidates for the expansion. It's possible to define a function $f$ by
+associating $x$ with the set of all positive integers $n$ such that a
+1 appears in the $n$th place in the expansion.
+
+	Given a real number $\xi \in \mathbf{A}$, set $f(\xi)$ is
+\emph{finite}.
 
 	According to the definition of cofinite, each finite set corresponds
 to a cofinite set. In our case, each finite set $f(\xi)$ determined by a
@@ -76,21 +81,23 @@ by a real number
 		& = & 0 . y_1 y_2 \ldots y_{m - 1} y_m + 2^{-m} \nonumber \\
 		& = & \frac{N'}{2^m} + 2^{-m} \nonumber \\
 		& = & \frac{N'}{2^m} + \frac{1}{2^m} \nonumber \\
-		& = & \frac{N' + 1}{2^m} \text{, where } N' \in \mathbb{N}^+,
+		& = & \frac{N' + 1}{2^m} \text{, where } N' \in \mathbb{N},
 	y_i \in \{ 0, 1 \}. \nonumber
 	\end{IEEEeqnarray}
 
-	Each $y_i$ in the binary expansion of $\xi'$ is 1 when $x_i$ in the
+	$y_i$ in the binary expansion of $\xi'$ is 1 when $x_i$ in the
 binary expansion of $\xi$ is 0, and \textit{vice versa}. Since positive
-integer $N$ has at least a single 1 in $x_i$, it's not possible that all
-$y_i$ equals 1. Thus, we are confident with the fact $\xi' = \frac{N' + 1}
+integer $N$ has at least a single 1 in $x_i$s, it's not possible that all
+$y_i$s equal 1. Thus, we are confident with the fact $\xi' = \frac{N' + 1}
 {2^m} \in \mathbf{A}$.
 
 	Now, we could understand the relationship between set $\mathbf{A}$
-and $\mathbf{B}$. Clearly, they are equinumerous with each other.
+and $\mathbf{B}$. Clearly, they are equinumerous with each other, and the
+correspondence between them is function $f$.
 
-	It's not difficult for us to see that set $\mathbf{A}'$ and
-$\mathbf{B}'$ are equinumerous with each other too, and the correspndence
-between them is simply function $f$.
+	Since interval $(0, 1)$ is equinumerous with the set of all positive
+integers owing to the same correspndence $f$, it's not very difficult for us
+to see that set $\mathbf{A}'$ and $\mathbf{B}'$ are also equinumerous with
+each other owing to the same correspondence $f$.
 \end{proof}
 \end{document}
