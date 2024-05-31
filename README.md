@@ -1,5 +1,6 @@
 # *Computability and Logic*
-Some solutions of mine to problems in the *Computability and Logic*, 5th edition.
+Some solutions of mine to problems in the *Computability and Logic*,
+*5th Edition*.
 
 
 
